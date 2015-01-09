@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'KMMParseConfigurationManager', :exclusive => true do
+  pod "KMMParseConfigurationManager", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "KMMParseConfigurationManager", :path => "../"
+
+  pod 'Specta', '~> 0.2.1'
+  pod 'Expecta'
+end

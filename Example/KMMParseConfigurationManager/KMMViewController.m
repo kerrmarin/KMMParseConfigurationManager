@@ -8,7 +8,13 @@
 
 #import "KMMViewController.h"
 
+#import "KMMParseConfigurationManager+KMMConfiguration.h"
+
 @interface KMMViewController ()
+
+@property(nonatomic, weak) IBOutlet UILabel *firstLabel;
+@property(nonatomic, weak) IBOutlet UILabel *secondLabel;
+@property(nonatomic, weak) IBOutlet UILabel *thirdLabel;
 
 @end
 
@@ -17,13 +23,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.firstLabel.text = [[KMMParseConfigurationManager manager] configValueOne];
+    self.secondLabel.text = [[KMMParseConfigurationManager manager] configValueTwo];
+    self.thirdLabel.text = [[KMMParseConfigurationManager manager] configValueThree];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

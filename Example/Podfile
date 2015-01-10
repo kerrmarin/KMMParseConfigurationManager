@@ -1,5 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+pod "Parse", '~> 1.6'
+
 target 'KMMParseConfigurationManager', :exclusive => true do
   pod "KMMParseConfigurationManager", :path => "../"
 end

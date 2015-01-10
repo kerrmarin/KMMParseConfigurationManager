@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PARSE_CLIENT_KEY</key>
+	<string></string>
+	<key>PARSE_APP_ID</key>
+	<string></string>
+	<key>configValueOne</key>
+	<string>Local config first value</string>
+	<key>configValueTwo</key>
+	<string>Local config second value</string>
+	<key>configValueThree</key>
+	<string>Local config third value</string>
+</dict>
+</plist>

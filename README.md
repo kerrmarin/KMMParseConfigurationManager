@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+This project has a requirement on the Parse Framework
+
 ## Installation
 
 KMMParseConfigurationManager is available through [CocoaPods](http://cocoapods.org). To install

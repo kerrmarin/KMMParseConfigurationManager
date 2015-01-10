@@ -24,10 +24,21 @@
  *  @return a singleton that serves as the config manager
  */
 +(instancetype)manager {
+    return [KMMParseConfigurationManager managerWithConfigurationFile:@"configuration"];
+}
+
+/**
+ *  Creates a singleton for the configuration manager with the given configuration plist file
+ *
+ *  @param fileName the file where the configuration is located
+ *
+ *  @return a singleton that serves as the config manager
+ */
++(instancetype)managerWithConfigurationFile:(NSString *)fileName {
     static KMMParseConfigurationManager *_manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"configuration" ofType:@"plist"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"plist"];
         NSDictionary *localConfig = [[NSDictionary alloc] initWithContentsOfFile:path];
         _manager = [[KMMParseConfigurationManager alloc] initWithLocalConfiguration:localConfig];
     });

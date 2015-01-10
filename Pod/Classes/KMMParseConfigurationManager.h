@@ -11,6 +11,7 @@
 @interface KMMParseConfigurationManager : NSObject
 
 +(instancetype)manager;
++(instancetype)managerWithConfigurationFile:(NSString*)fileName;
 
 -(void)fetchRemoteConfig;
 -(NSString*)configurationValueForKey:(NSString*)key;

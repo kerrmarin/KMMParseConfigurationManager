@@ -1,13 +1,13 @@
 PODS:
   - Bolts (1.1.4)
-  - KMMParseConfigurationManager (1.0.1):
-    - Parse (~> 1.6)
+  - KMMParseConfigurationManager (2.0.0):
+    - Parse (~> 1.7)
   - Parse (1.7.1):
     - Bolts (~> 1.1)
 
 DEPENDENCIES:
   - KMMParseConfigurationManager (from `../`)
-  - Parse (~> 1.6)
+  - Parse (~> 1.7)
 
 EXTERNAL SOURCES:
   KMMParseConfigurationManager:
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
-  KMMParseConfigurationManager: 98ef11d6e0aeab4a8f81e70cdb1bb150241367ed
+  KMMParseConfigurationManager: b2e95ed2ca19ddb25a3e4cb1c7d51a73b173022f
   Parse: fa8ec29de6d82035635986c11946299fb1b38316
 
 COCOAPODS: 0.36.3

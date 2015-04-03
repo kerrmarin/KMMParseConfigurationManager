@@ -60,14 +60,32 @@
 }
 
 /**
- *  Fetches the remote configuration form Parse and stores it in [PFConfig currentConfig]
+ *  Fetches the remote configuration synchronously form Parse and stores it in [PFConfig currentConfig]
  */
 -(void)fetchRemoteConfig {
-    [PFConfig getConfigInBackground];
+    [PFConfig getConfig];
 }
 
+/**
+ *  Fetches the remote configuration from Parse asynchronouysly
+ *
+ *  @return the task that encapsulates the work being done.
+ */
+-(BFTask *)fetchRemoteConfigInBackground {
+    return [PFConfig getConfigInBackground];
+}
 
-#pragma mark -- Configuration item getter
+/**
+ *  Fetches the remote configuration from Parse and then executes the given block
+ *
+ *  @param block a block to execute when the request has finished. You must set the current config
+ *  in the block.
+ */
+-(void)fetchRemoteConfigInBackgroundWithBlock:(void (^)(PFConfig *, NSError *))block {
+    [PFConfig getConfigInBackgroundWithBlock:block];
+}
+
+#pragma mark - Configuration item getter
 
 /**
  *  Returns the Parse API key

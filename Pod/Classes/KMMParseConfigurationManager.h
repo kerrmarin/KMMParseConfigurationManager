@@ -6,7 +6,9 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+@class PFConfig, BFTask;
 
 @interface KMMParseConfigurationManager : NSObject
 
@@ -14,6 +16,9 @@
 +(instancetype)managerWithConfigurationFile:(NSString*)fileName;
 
 -(void)fetchRemoteConfig;
+-(BFTask *)fetchRemoteConfigInBackground;
+-(void)fetchRemoteConfigInBackgroundWithBlock:(void(^)(PFConfig *config, NSError *error))block;
+
 -(NSString*)configurationValueForKey:(NSString*)key;
 
 -(NSString *)parseAppId;

@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "KMMParseConfigurationManager"
-  s.version          = "1.0.1"
+  s.version          = "2.0.0"
   s.summary          = "A wrapper for PFConfig that allows the use of local configuration."
   s.description      = <<-DESC
                         A configuration manager that integrates with Parse to provide a local backup of configuration variables in case Parse is unavailable when you first run your app.
@@ -30,5 +30,5 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'Parse', '~> 1.6'
+  s.dependency 'Parse', '~> 1.7'
 end
